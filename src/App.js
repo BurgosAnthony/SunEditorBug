@@ -36,6 +36,7 @@ const MyComponent = props => {
   const handleClick = (e) => {
     counter++;
     console.log(`You just clicked ${counter} times`)
+    console.log(e)
     if (counter === 10) {
       alert("You clicked 10 times!")
     }
