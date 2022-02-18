@@ -32,6 +32,10 @@ const MyComponent = props => {
     console.log(`Success! You're copying! ${e} ${clipboardData}`)
   }
 
+  const handleKeyDown = (e) => {
+    console.log(`A key has been pressed. ${e}`)
+  }
+
   let counter = 0;
   const handleClick = (e) => {
     counter++;
@@ -61,11 +65,13 @@ const MyComponent = props => {
         // onPaste={handlePaste}
         onClick={handleClick}
         onCopy={handleCopy}
+        onKeyDown={handleKeyDown}
         setOptions={{
           height: 200,
           buttonList: [
             [
               "bold",
+              "codeView",
               "underline",
               "italic",
               "strike",
